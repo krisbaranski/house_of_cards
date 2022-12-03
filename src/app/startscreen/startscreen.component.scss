@@ -1,0 +1,18 @@
+.startscreen {
+  background-color: #229d98;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 45%;
+  }
+
+  a {
+    cursor: pointer;
+  }
+}
