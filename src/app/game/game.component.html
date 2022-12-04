@@ -7,9 +7,18 @@
       alt="back cards"
     />
     <img
+      (click)="pickCard()"
       class="top-card"
       style="right: 40px"
       src="/assets/img/cards/card_cover.png"
+      alt="pick card"
+    />
+    <img
+      (click)="pickCard()"
+      *ngIf="pickCardAnimation"
+      class="pick-card"
+      style="right: 40px"
+      src="/assets/img/cards/spade_1.png"
       alt="top card"
     />
   </div>
