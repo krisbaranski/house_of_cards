@@ -1,10 +1,16 @@
 <div class="field">
   <div class="card-stack">
     <img
-      *ngFor="let c of [0, 1, 2, 3, 4]; let i = index"
+      *ngFor="let c of [0, 1, 2, 3]; let i = index"
       [ngStyle]="{ 'right.px': i * 10 }"
       src="/assets/img/cards/card_cover.png"
       alt="back cards"
+    />
+    <img
+      class="top-card"
+      style="right: 40px"
+      src="/assets/img/cards/card_cover.png"
+      alt="top card"
     />
   </div>
 </div>
