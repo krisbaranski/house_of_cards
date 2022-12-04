@@ -18,3 +18,12 @@
     width: 120px;
   }
 }
+
+.top-card {
+  cursor: pointer;
+  transition: all 135ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.1) translateY(-15px);
+  }
+}
