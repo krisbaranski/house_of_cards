@@ -13,6 +13,17 @@
       src="/assets/img/cards/card_cover.png"
       alt="pick card"
     />
+
+    <!-- Second stack for played cards -->
+    <img
+      *ngFor="let card of game.playedCards"
+      class="played-card"
+      style="right: 40px"
+      src="/assets/img/cards/{{ card }}.png"
+      alt="top card"
+    />
+
+    <!-- Current card with animation -->
     <img
       (click)="pickCard()"
       *ngIf="pickCardAnimation"
