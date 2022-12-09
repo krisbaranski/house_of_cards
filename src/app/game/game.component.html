@@ -1,11 +1,16 @@
+<app-player class="player-position" style="top: 20%"></app-player>
+
 <div class="field">
   <div class="card-stack">
+    <!-- Starting cards stack -->
     <img
       *ngFor="let c of [0, 1, 2, 3]; let i = index"
       [ngStyle]="{ 'right.px': i * 10 }"
       src="/assets/img/cards/card_cover.png"
       alt="back cards"
     />
+
+    <!-- Hover and click on card animation -->
     <img
       (click)="pickCard()"
       class="top-card"
