@@ -1,8 +1,10 @@
 <app-player
+  (click)="editPlayer(i)"
   *ngFor="let player of game.players; let i = index"
   class="player-position"
   [ngStyle]="{ 'top.px': 80 + i * 90 }"
   [playerActive]="i === game.currentPlayer"
+  [image]="game.player_images[i]"
   [name]="player"
 ></app-player>
 
@@ -37,16 +39,16 @@
     <!-- Current card with animation -->
     <img
       (click)="pickCard()"
-      *ngIf="pickCardAnimation"
+      *ngIf="game.pickCardAnimation"
       class="pick-card"
       style="right: 40px"
-      src="/assets/img/cards/{{ currentCard }}.png"
+      src="/assets/img/cards/{{ game.currentCard }}.png"
       alt="top card"
     />
   </div>
 </div>
 
-<app-game-text [card]="currentCard" class="game-text"></app-game-text>
+<app-game-text [card]="game.currentCard" class="game-text"></app-game-text>
 
 <button
   mat-fab
