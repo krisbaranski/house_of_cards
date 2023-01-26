@@ -13,20 +13,32 @@ import { GameTextComponent } from './game-text/game-text.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
+
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideDatabase, getDatabase } from '@angular/fire/database';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    StartscreenComponent,
+    StartScreenComponent,
     GameComponent,
     PlayerComponent,
     DialogAddPlayerComponent,
     GameTextComponent,
+    EditPlayerComponent,
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
