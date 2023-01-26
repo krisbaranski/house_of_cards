@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GameComponent } from './game/game.component';
-import { StartscreenComponent } from './startscreen/startscreen.component';
+import { StartScreenComponent } from './startscreen/startscreen.component';
 
 const routes: Routes = [
-  { path: '', component: StartscreenComponent },
-  { path: 'game', component: GameComponent },
+  { path: '', component: StartScreenComponent },
+  { path: 'game/:id', component: GameComponent },
 ];
 
 @NgModule({
