@@ -14,17 +14,30 @@ export class Game {
       this.stack.push('clubs_' + i);
       this.stack.push('diamonds_' + i);
     }
+
     shuffle(this.stack);
+  }
+
+  public toJson() {
+    return {
+      players: this.players,
+      player_images: this.player_images,
+      stack: this.stack,
+      playedCards: this.playedCards,
+      currentPlayer: this.currentPlayer,
+      pickCardAnimtation: this.pickCardAnimation,
+      currentCard: this.currentCard,
+    };
   }
 }
 
-function shuffle(array: any) {
+function shuffle(array) {
   let currentIndex = array.length,
     randomIndex;
 
-  // While there remain elements to shuffle.
+  // While there remain elements to shuffle...
   while (currentIndex != 0) {
-    // Pick a remaining element.
+    // Pick a remaining element...
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
 
