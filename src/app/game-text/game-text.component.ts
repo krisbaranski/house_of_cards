@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-game-text',
   templateUrl: './game-text.component.html',
   styleUrls: ['./game-text.component.scss'],
 })
-export class GameTextComponent implements OnInit {
+export class GameTextComponent implements OnInit, OnChanges {
   cardAction = [
     {
       title: 'Waterfall',
@@ -51,9 +51,19 @@ export class GameTextComponent implements OnInit {
 
   title: string = '';
   description: string = '';
-  @Input() card: string;
+  @Input() card?: string;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  ngOnChanges(): void {
+    if (this.card) {
+      //console.log('Current card:', this.card);
+      //console.log('Current card:', +this.card.split('_')[1]; // String in Zahl umwandeln durch + davor
+      let cardNumber = +this.card.split('_')[1];
+      this.title = this.cardAction[cardNumber - 1].title;
+      this.description = this.cardAction[cardNumber - 1].description;
+    }
+  }
 }
