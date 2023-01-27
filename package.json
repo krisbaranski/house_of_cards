@@ -1,6 +1,6 @@
 {
   "homepage": "https://krisbaranski.github.io/house_of_cards/",
-  "name": "house-of-cards",
+  "name": "house_of_cards",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
