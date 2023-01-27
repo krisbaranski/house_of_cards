@@ -15,7 +15,7 @@
       *ngFor="let c of [0, 1, 2, 3]; let i = index"
       class="shadow"
       [ngStyle]="{ 'right.px': i * 10 }"
-      src="/assets/img/cards/card_cover.png"
+      src="assets/img/cards/card_cover.png"
       alt="back cards"
     />
 
@@ -24,7 +24,7 @@
       (click)="pickCard()"
       class="top-card"
       style="right: 40px"
-      src="/assets/img/cards/card_cover.png"
+      src="assets/img/cards/card_cover.png"
       alt="pick card"
     />
 
@@ -34,7 +34,7 @@
       [ngClass]="this.game.playedCards.length > 2 ? null : 'shadow'"
       class="played-card shadow"
       style="right: 40px"
-      src="/assets/img/cards/{{ card }}.png"
+      src="assets/img/cards/{{ card }}.png"
       alt="top card"
     />
 
@@ -44,7 +44,7 @@
       *ngIf="game.pickCardAnimation"
       class="pick-card"
       style="right: 40px"
-      src="/assets/img/cards/{{ game.currentCard }}.png"
+      src="assets/img/cards/{{ game.currentCard }}.png"
       alt="top card"
     />
   </div>
