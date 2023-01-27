@@ -2,17 +2,16 @@
   display: flex;
   align-items: center;
   background-color: #999;
-  border: 2px solid #5e2323;
   width: auto;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   border-right: 0;
-  box-shadow: -2px 3px 8px rgba(0, 0, 0, 0.7);
+  box-shadow: -2px 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 span {
   font-size: 2rem;
-  margin-right: 1.5rem;
+  margin: 0 1.5rem;
   color: #000000;
 }
 
@@ -26,6 +25,6 @@ img {
   background-color: #ffa73b;
   border: 4px solid #ffdfb7;
   border-right: 0;
-  box-shadow: -4px 10px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: -4px 10px 15px rgba(0, 0, 0, 0.6);
   transform: scale(1.1);
 }
