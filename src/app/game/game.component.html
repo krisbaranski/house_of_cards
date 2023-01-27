@@ -13,6 +13,7 @@
     <!-- Starting cards stack -->
     <img
       *ngFor="let c of [0, 1, 2, 3]; let i = index"
+      class="shadow"
       [ngStyle]="{ 'right.px': i * 10 }"
       src="/assets/img/cards/card_cover.png"
       alt="back cards"
@@ -30,7 +31,8 @@
     <!-- Second stack for played cards -->
     <img
       *ngFor="let card of game.playedCards"
-      class="played-card"
+      [ngClass]="this.game.playedCards.length > 2 ? null : 'shadow'"
+      class="played-card shadow"
       style="right: 40px"
       src="/assets/img/cards/{{ card }}.png"
       alt="top card"
