@@ -19,6 +19,14 @@
       alt="back cards"
     />
 
+    <!-- Setting extra shadow for played cards stack -->
+    <img
+      [ngClass]="this.game.playedCards.length > 1 ? 'played-card shadow' : null"
+      style="right: 40px"
+      src="assets/img/cards/card_cover.png"
+      alt="bottom card"
+    />
+
     <!-- Hover and click on card animation -->
     <img
       (click)="pickCard()"
@@ -31,8 +39,8 @@
     <!-- Second stack for played cards -->
     <img
       *ngFor="let card of game.playedCards"
-      [ngClass]="this.game.playedCards.length > 2 ? null : 'shadow'"
-      class="played-card shadow"
+      [ngClass]="this.game.playedCards.length > 1 ? null : 'shadow'"
+      class="played-card"
       style="right: 40px"
       src="assets/img/cards/{{ card }}.png"
       alt="top card"
@@ -58,6 +66,7 @@
   class="btn-add"
   (click)="openDialog()"
   aria-label="add button"
+  autofocus
 >
   <mat-icon>add</mat-icon>
 </button>
