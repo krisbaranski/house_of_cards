@@ -8,22 +8,25 @@
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 
   img {
     height: 50vh;
   }
 
   a {
-    background-color: #004822;
-    padding: 0 10px 5px 10px;
+    background-color: #fff;
+    padding: 5px 10px;
     border-radius: 5px;
     font-size: 1.5rem;
-    color: #fff;
+    color: green;
+    font-weight: 900;
+    font-family: sans-serif;
     cursor: pointer;
 
     &:hover {
-      color: #8ad9d7;
-      background-color: #00482283;
+      color: #ffffff;
+      background-color: #227b3570;
     }
   }
 }
