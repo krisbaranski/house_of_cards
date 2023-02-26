@@ -13,7 +13,7 @@ export class DialogAddPlayerComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onNoClick() {
+  onNoName() {
     this.dialogRef.close();
   }
 }
