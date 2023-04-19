@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Game } from 'src/models/game';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
@@ -18,7 +18,8 @@ export class GameComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private firestore: AngularFirestore,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public el: ElementRef
   ) {}
 
   ngOnInit(): void {
@@ -54,14 +55,11 @@ export class GameComponent implements OnInit {
         this.game.currentCard = this.game.stack.pop()!;
         this.game.pickCardAnimation = true;
 
-        // if (this.game.playedCards.length > 5) {
-        // }
-
         setTimeout(() => {
           this.game.currentPlayer++;
           this.game.currentPlayer =
             this.game.currentPlayer % this.game.players.length;
-        }, 2000);
+        }, 1000);
 
         this.saveGame();
 
@@ -97,7 +95,7 @@ export class GameComponent implements OnInit {
       if (name && name.length > 0) {
         // check ob die variable name existiert und wenn sie existiert ob sie größer als 0 ist
         this.game.players.push(name);
-        this.game.player_images.push('m1.png');
+        this.game.player_images.push('player1.png');
         this.saveGame();
       }
     });
